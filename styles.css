@@ -203,6 +203,7 @@ h1 { font-size: clamp(2.25rem, 1rem + 4.2vw, 3.75rem); line-height: 1.08; letter
 }
 .project-art .a { stroke: var(--accent); }
 .project-art .f { fill: var(--accent); }
+.project-art .thin { stroke-width: 1; }
 .project-art .dashed { stroke-dasharray: 5 4; }
 .project-art .t text { fill: currentColor; stroke: none; font: 11px var(--font-mono); }
 .project-art .t .ta { fill: var(--accent); font-weight: 700; }
@@ -230,16 +231,17 @@ h1 { font-size: clamp(2.25rem, 1rem + 4.2vw, 3.75rem); line-height: 1.08; letter
 
 @supports selector(:has(*)) {
   .filter { display: block; }
-  .workshop:has(#f-software:checked) li[data-kind]:not([data-kind~="software"]),
-  .workshop:has(#f-hardware:checked) li[data-kind]:not([data-kind~="hardware"]),
-  .workshop:has(#f-creative:checked) li[data-kind]:not([data-kind~="creative"]) { display: none; }
+  .workshop:has(#f-games:checked) li[data-kind]:not([data-kind~="games"]),
+  .workshop:has(#f-music:checked) li[data-kind]:not([data-kind~="music"]),
+  .workshop:has(#f-tools:checked) li[data-kind]:not([data-kind~="tools"]) { display: none; }
 }
 
 /* ---------- 8. Quiet lists: drawer, log, facts, contact ---------- */
 .two-col { display: grid; gap: var(--space-5); }
 
+.drawer-list { display: grid; gap: 0 var(--space-5); grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr)); }
 .drawer-list li { padding-block: var(--space-2); border-top: 1px dashed var(--border); font-size: 0.9375rem; color: var(--text-muted); }
-.drawer-list a { display: block; font-weight: 600; }
+.drawer-list a, .drawer-title { display: block; font-weight: 600; color: var(--text); }
 .status { font-family: var(--font-mono); font-size: 0.75rem; white-space: nowrap; }
 
 .timeline li { padding: 0 0 var(--space-3) var(--space-3); border-left: 2px solid var(--border); }

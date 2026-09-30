@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Name – Workshop</title>
-  <meta name="description" content="A personal workshop: software, hardware, art and assorted experiments by Your Name. (Placeholder description – replace me.)">
+  <title>Kit Manners – Workshop</title>
+  <meta name="description" content="Kit Manners (@gigosaurus): games, music tools and software for problems nobody asked about.">
   <meta name="theme-color" content="#faf8f2" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#121412" media="(prefers-color-scheme: dark)">
   <meta name="color-scheme" content="light dark">
 
-  <!-- Open Graph placeholders: set the real URL and add a 1200x630 image at assets/og-image.png -->
+  <!-- Open Graph. Check the URL, and add a 1200x630 image at assets/og-image.png -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Your Name – Workshop">
-  <meta property="og:description" content="Software, hardware, art and assorted experiments.">
-  <meta property="og:url" content="https://example.com/">
-  <meta property="og:image" content="https://example.com/assets/og-image.png">
+  <meta property="og:title" content="Kit Manners – Workshop">
+  <meta property="og:description" content="Games, music tools and software for problems nobody asked about.">
+  <meta property="og:url" content="https://gigosaurus.com/">
+  <meta property="og:image" content="https://gigosaurus.com/assets/og-image.png">
   <meta name="twitter:card" content="summary">
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -28,9 +28,9 @@
   <header class="site-header">
     <div class="container header-inner">
       <p class="brand">
-        <a href="#top" class="brand-name">Your Name</a>
+        <a href="#top" class="brand-name">Kit Manners</a>
         <!-- EDIT: tagline -->
-        <span class="brand-role">builds things, breaks things</span>
+        <span class="brand-role">solving problems nobody asked about</span>
       </p>
 
       <!-- Plain links that wrap on narrow screens: no JavaScript or menu toggle needed -->
@@ -55,11 +55,10 @@
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <!-- EDIT: headline and intro -->
           <h1 id="hero-title">I make things, break them, and occasionally write down how.</h1>
           <p class="lead">
-            Code, circuit boards, generative art and other things that started
-            as "how hard can it be?". Some of it works.
+            Games, music tools and software for problems that nobody asked
+            about. Some of it works.
           </p>
           <p class="actions">
             <a class="button button-primary" href="#projects">Explore the workshop</a>
@@ -67,17 +66,18 @@
           </p>
         </div>
 
-        <!-- Decorative status panel: hidden from screen readers -->
+        <!-- Decorative status panel: hidden from screen readers. EDIT the lines freely -->
         <figure class="terminal" aria-hidden="true">
           <figcaption class="terminal-bar">status.txt</figcaption>
           <pre><span class="t-dim">$</span> whoami
-your-name
+gigosaurus
 <span class="t-dim">$</span> cat status.txt
 mood:     caffeinated
-building: a thing with too many LEDs
-reading:  datasheets (for fun)
-<span class="t-dim">$</span> ls ./ideas | wc -l
-47
+building: a thing to solve a
+          hyper-specific problem
+          that no one asked for
+reading:  An Acolyte's Guide to
+          Demon Handling
 <span class="t-dim">$</span> <span class="cursor">█</span></pre>
         </figure>
       </div>
@@ -91,8 +91,13 @@ reading:  datasheets (for fun)
 
         <!--
           EDIT: each <li> is one project. Copy a whole block to add one.
-          data-kind drives the filter: software, hardware or creative (space-separate for several).
+          data-kind drives the filter: games, music or tools (space-separate for several).
           class="project-feature" makes a project span the full width; remove it for a normal card.
+          To add links, put this after the .project-desc paragraph:
+          <p class="project-links">
+            <a href="https://…">View project<span class="visually-hidden">: Name</span></a>
+            <a href="https://github.com/gigosaurus/…" target="_blank" rel="noopener noreferrer">Source code<span class="visually-hidden"> for Name (opens in new tab)</span></a>
+          </p>
           The diagram is inline SVG so it follows the light/dark theme. To use a real image instead,
           replace the <svg> with:
           <img src="assets/your-image.png" width="640" height="320" loading="lazy" alt="Describe what the image shows">
@@ -103,157 +108,132 @@ reading:  datasheets (for fun)
             <legend>Show</legend>
             <div class="filter-options">
               <input type="radio" name="kind" id="f-all" checked><label for="f-all">All</label>
-              <input type="radio" name="kind" id="f-software"><label for="f-software">Software</label>
-              <input type="radio" name="kind" id="f-hardware"><label for="f-hardware">Hardware</label>
-              <input type="radio" name="kind" id="f-creative"><label for="f-creative">Creative</label>
+              <input type="radio" name="kind" id="f-games"><label for="f-games">Games</label>
+              <input type="radio" name="kind" id="f-music"><label for="f-music">Music</label>
+              <input type="radio" name="kind" id="f-tools"><label for="f-tools">Tools</label>
             </div>
           </fieldset>
 
           <ul class="project-grid">
-            <!-- 01 Bitrot -->
-            <li data-kind="software" class="project-feature">
+            <!-- 01 Tap Tap Reloaded -->
+            <li data-kind="games music" class="project-feature">
               <article class="project">
                 <div class="project-art" aria-hidden="true">
                   <svg viewBox="0 0 320 160" focusable="false">
-                    <g><rect x="24" y="34" width="62" height="76" rx="3"/><path d="M38 56h34M38 68h34M38 80h20"/></g>
-                    <g><rect x="94" y="34" width="62" height="76" rx="3"/><path d="M108 56h34M108 68h34M108 80h20"/></g>
-                    <g class="a dashed"><rect x="164" y="34" width="62" height="76" rx="3"/><path d="M180 58l30 28M210 58l-30 28"/></g>
-                    <g><rect x="234" y="34" width="62" height="76" rx="3"/><path d="M248 56h34M248 68h34M248 80h20"/></g>
-                    <g class="t"><text x="55" y="132" text-anchor="middle">a3f9</text><text x="125" y="132" text-anchor="middle">77c1</text><text x="195" y="132" text-anchor="middle" class="ta">e0??</text><text x="265" y="132" text-anchor="middle">19bd</text></g>
+                    <path class="thin" d="M60 16v124M110 16v124M160 16v124M210 16v124M260 16v124"/>
+                    <path class="a" d="M50 118h220"/>
+                    <circle cx="85" cy="38" r="10"/>
+                    <circle cx="185" cy="62" r="10"/>
+                    <circle cx="135" cy="92" r="10"/>
+                    <circle class="a f" cx="235" cy="118" r="10"/>
+                    <circle cx="85" cy="118" r="10"/>
                   </svg>
                 </div>
                 <div class="project-body">
-                  <h3 class="project-title">Bitrot</h3>
-                  <p class="project-desc">Checksums my old photo archive every night and tells me when a file quietly goes bad. It found three. I was not thrilled.</p>
-                  <p class="project-links">
-                    <a href="https://example.com/bitrot">View project<span class="visually-hidden">: Bitrot</span></a>
-                    <a href="https://github.com/your-username/bitrot" target="_blank" rel="noopener noreferrer">Source code<span class="visually-hidden"> for Bitrot (opens in new tab)</span></a>
-                  </p>
-                  <p class="project-meta">№ 01 · Software · ● Shipped · Python, SQLite, cron</p>
+                  <h3 class="project-title">Tap Tap Reloaded</h3>
+                  <p class="project-desc">A community-focused rhythm game for Android and iOS. I co-founded it and built the backend, the Discord integration and a multiplayer server in Go. The open beta was played by around 400,000 people.</p>
+                  <p class="project-meta">№ 01 · Games + music · ● Open beta · Unity, Go, PHP, AWS</p>
                 </div>
               </article>
             </li>
 
-            <!-- 02 tidytree -->
-            <li data-kind="software">
+            <!-- 02 PartyZone -->
+            <li data-kind="games">
               <article class="project">
                 <div class="project-art" aria-hidden="true">
                   <svg viewBox="0 0 320 160" focusable="false">
-                    <rect x="24" y="42" width="44" height="20" rx="2" transform="rotate(-9 46 52)"/>
-                    <rect x="66" y="86" width="50" height="20" rx="2" transform="rotate(7 91 96)"/>
-                    <rect x="30" y="100" width="36" height="20" rx="2" transform="rotate(-4 48 110)"/>
-                    <rect x="78" y="40" width="38" height="20" rx="2" transform="rotate(12 97 50)"/>
-                    <path class="a" d="M136 80h40M166 70l10 10-10 10"/>
-                    <path d="M214 38v84M214 54h22M214 80h22M214 106h22"/>
-                    <rect x="240" y="44" width="56" height="20" rx="2"/><rect x="240" y="70" width="56" height="20" rx="2" class="a"/><rect x="240" y="96" width="56" height="20" rx="2"/>
+                    <path class="thin" d="M50 38L136 70M50 80L136 80M50 122L136 90M96 58L136 74M96 102L136 86M270 38L184 70M270 80L184 80M270 122L184 90M224 58L184 74M224 102L184 86"/>
+                    <circle cx="40" cy="36" r="9"/><circle cx="40" cy="80" r="9"/><circle cx="40" cy="124" r="9"/><circle cx="86" cy="58" r="9"/><circle cx="86" cy="102" r="9"/>
+                    <circle cx="280" cy="36" r="9"/><circle cx="280" cy="80" r="9"/><circle cx="280" cy="124" r="9"/><circle cx="234" cy="58" r="9"/><circle cx="234" cy="102" r="9"/>
+                    <rect class="a" x="136" y="58" width="48" height="44" rx="3"/>
+                    <path class="a" d="M148 74h24M148 86h24"/>
                   </svg>
                 </div>
                 <div class="project-body">
-                  <h3 class="project-title">tidytree</h3>
-                  <p class="project-desc">A CLI that tidies messy project folders. Has a dry-run mode, because I once didn't, and we don't talk about it.</p>
-                  <p class="project-links">
-                    <a href="https://example.com/tidytree">View project<span class="visually-hidden">: tidytree</span></a>
-                    <a href="https://github.com/your-username/tidytree" target="_blank" rel="noopener noreferrer">Source code<span class="visually-hidden"> for tidytree (opens in new tab)</span></a>
-                  </p>
-                  <p class="project-meta">№ 02 · Software · ● Shipped · Go</p>
+                  <h3 class="project-title">PartyZone</h3>
+                  <p class="project-desc">Online multiplayer games that I started, ran with a remote team, and eventually sold on so I could finish my degree. More than 3 million people played them.</p>
+                  <p class="project-meta">№ 02 · Games · ○ Sold on · Java, PHP, Python, Redis</p>
                 </div>
               </article>
             </li>
 
-            <!-- 03 Windowsill -->
-            <li data-kind="hardware">
+            <!-- 03 Swanzo -->
+            <li data-kind="tools">
               <article class="project">
                 <div class="project-art" aria-hidden="true">
                   <svg viewBox="0 0 320 160" focusable="false">
-                    <rect x="70" y="16" width="180" height="128" rx="6"/>
-                    <rect x="82" y="28" width="156" height="104" rx="2"/>
-                    <circle class="a" cx="112" cy="62" r="11"/>
-                    <path class="a" d="M112 41v5M91 62h5M128 62h5M97 47l3 3M127 47l-3 3"/>
-                    <path d="M150 54h64M150 68h40"/>
-                    <path d="M200 124V98M200 110c-10-2-14-10-14-14 10 0 14 6 14 14zM200 104c10-2 14-10 14-14-10 0-14 6-14 14z"/>
+                    <rect x="22" y="50" width="88" height="60" rx="5"/>
+                    <path d="M22 70h88M32 94h28"/>
+                    <path class="a" d="M130 80h44M164 70l10 10-10 10"/>
+                    <path class="a" d="M240 124C226 106 214 94 214 78a26 26 0 0 1 52 0c0 16-12 28-26 46z"/>
+                    <circle class="a" cx="240" cy="78" r="9"/>
                   </svg>
                 </div>
                 <div class="project-body">
-                  <h3 class="project-title">Windowsill</h3>
-                  <p class="project-desc">An e-ink display that shows the weather and judges my houseplants. Firmware is done; the case is on its fourth print.</p>
-                  <p class="project-links">
-                    <a href="https://example.com/windowsill">View project<span class="visually-hidden">: Windowsill</span></a>
-                    <a href="https://github.com/your-username/windowsill" target="_blank" rel="noopener noreferrer">Source code<span class="visually-hidden"> for Windowsill (opens in new tab)</span></a>
-                  </p>
-                  <p class="project-meta">№ 03 · Hardware · ◐ Tinkering · C++, ESP32, a 3D printer</p>
+                  <h3 class="project-title">Swanzo</h3>
+                  <p class="project-desc">Checks me in to Swarm venues whenever my Monzo card is used there. Nobody had this problem, but now it's solved, with a customisable Symfony app and an admin panel.</p>
+                  <p class="project-meta">№ 03 · Tools · ● Built · PHP (Symfony), Monzo and Swarm APIs</p>
                 </div>
               </article>
             </li>
 
-            <!-- 04 Flowfield -->
-            <li data-kind="creative">
+            <!-- 04 MIDI to sheet music -->
+            <li data-kind="music">
               <article class="project">
                 <div class="project-art" aria-hidden="true">
                   <svg viewBox="0 0 320 160" focusable="false">
-                    <path d="M0 130C50 70 110 170 160 110S270 50 320 90" transform="translate(0 -40)"/>
-                    <path d="M0 130C50 70 110 170 160 110S270 50 320 90" transform="translate(0 -24)"/>
-                    <path class="a" d="M0 130C50 70 110 170 160 110S270 50 320 90" transform="translate(0 -8)"/>
-                    <path d="M0 130C50 70 110 170 160 110S270 50 320 90" transform="translate(0 8)"/>
-                    <path d="M0 130C50 70 110 170 160 110S270 50 320 90" transform="translate(0 24)"/>
+                    <path d="M20 114h26v8H20zM50 100h18v8H50zM72 86h30v8H72zM40 72h22v8H40zM86 58h16v8H86z"/>
+                    <path class="a" d="M122 80h36M148 70l10 10-10 10"/>
+                    <path class="thin" d="M176 58h124M176 68h124M176 78h124M176 88h124M176 98h124"/>
+                    <path d="M202 88V60M228 78V50M254 68V42M280 83V55"/>
+                    <ellipse cx="196" cy="88" rx="7" ry="5" class="a f"/>
+                    <ellipse cx="222" cy="78" rx="7" ry="5"/><ellipse cx="248" cy="68" rx="7" ry="5"/><ellipse cx="274" cy="83" rx="7" ry="5"/>
                   </svg>
                 </div>
                 <div class="project-body">
-                  <h3 class="project-title">Flowfield</h3>
-                  <p class="project-desc">Generative prints drawn from noise fields. Reload the page, get a new one. I've lost hours to the refresh button.</p>
-                  <p class="project-links">
-                    <a href="https://example.com/flowfield">View project<span class="visually-hidden">: Flowfield</span></a>
-                    <a href="https://github.com/your-username/flowfield" target="_blank" rel="noopener noreferrer">Source code<span class="visually-hidden"> for Flowfield (opens in new tab)</span></a>
-                  </p>
-                  <p class="project-meta">№ 04 · Creative · ● Shipped · JavaScript, canvas</p>
+                  <h3 class="project-title">MIDI to sheet music</h3>
+                  <p class="project-desc">A Haskell command-line compiler that turns MIDI files into readable sheet music, knowingly trading precision for something a human can actually play. My final-year engineering project.</p>
+                  <p class="project-meta">№ 04 · Music · ● Finished · Haskell</p>
                 </div>
               </article>
             </li>
 
-            <!-- 05 Keyboard 0.3 -->
-            <li data-kind="hardware software">
+            <!-- 05 Festival Playlist Generator -->
+            <li data-kind="music tools">
               <article class="project">
                 <div class="project-art" aria-hidden="true">
                   <svg viewBox="0 0 320 160" focusable="false">
-                    <path d="M24 30h22v22h-22zM50 30h22v22h-22zM76 30h22v22h-22zM102 30h22v22h-22zM24 56h22v22h-22zM50 56h22v22h-22zM102 56h22v22h-22zM24 82h22v22h-22zM50 82h22v22h-22zM76 82h22v22h-22zM102 82h22v22h-22z"/>
-                    <path d="M192 30h22v22h-22zM218 30h22v22h-22zM244 30h22v22h-22zM270 30h22v22h-22zM192 56h22v22h-22zM218 56h22v22h-22zM244 56h22v22h-22zM270 56h22v22h-22zM192 82h22v22h-22zM218 82h22v22h-22zM244 82h22v22h-22zM270 82h22v22h-22z"/>
-                    <rect class="a f" x="76" y="56" width="22" height="22" rx="2"/>
+                    <path d="M28 50h70M28 70h54M28 90h62M28 110h46"/>
+                    <path class="a" d="M122 80h36M148 70l10 10-10 10"/>
+                    <rect x="182" y="32" width="112" height="96" rx="4"/>
+                    <path class="a f" d="M198 52l14 8-14 8z"/>
+                    <path d="M226 60h54M198 86h82M198 106h62"/>
                   </svg>
                 </div>
                 <div class="project-body">
-                  <h3 class="project-title">Keyboard 0.3</h3>
-                  <p class="project-desc">A hand-wired split keyboard with custom firmware. Version 0.1 had a key that typed on its own. Version 0.3 is merely opinionated.</p>
-                  <p class="project-links">
-                    <a href="https://example.com/keyboard">View project<span class="visually-hidden">: Keyboard 0.3</span></a>
-                    <a href="https://github.com/your-username/keyboard" target="_blank" rel="noopener noreferrer">Source code<span class="visually-hidden"> for Keyboard 0.3 (opens in new tab)</span></a>
-                  </p>
-                  <p class="project-meta">№ 05 · Hardware + software · ◐ Tinkering · Rust, a soldering iron, patience</p>
+                  <h3 class="project-title">Festival Playlist Generator</h3>
+                  <p class="project-desc">Predicts what a band will play at a festival and builds you a playlist of it, so you can learn the songs before the crowd does. Pulls from Spotify, setlist.fm and MusicBrainz.</p>
+                  <p class="project-meta">№ 05 · Music + tools · ● Built · PHP (Symfony), Spotify API</p>
                 </div>
               </article>
             </li>
 
-            <!-- 06 Darkroom Log -->
-            <li data-kind="creative software">
+            <!-- 06 Personal Life Blog -->
+            <li data-kind="tools">
               <article class="project">
                 <div class="project-art" aria-hidden="true">
                   <svg viewBox="0 0 320 160" focusable="false">
-                    <rect x="8" y="32" width="304" height="96" rx="3"/>
-                    <path d="M20 40h8v8h-8zM20 112h8v8h-8zM40 40h8v8h-8zM40 112h8v8h-8zM60 40h8v8h-8zM60 112h8v8h-8zM80 40h8v8h-8zM80 112h8v8h-8zM100 40h8v8h-8zM100 112h8v8h-8zM120 40h8v8h-8zM120 112h8v8h-8zM140 40h8v8h-8zM140 112h8v8h-8zM160 40h8v8h-8zM160 112h8v8h-8zM180 40h8v8h-8zM180 112h8v8h-8zM200 40h8v8h-8zM200 112h8v8h-8zM220 40h8v8h-8zM220 112h8v8h-8zM240 40h8v8h-8zM240 112h8v8h-8zM260 40h8v8h-8zM260 112h8v8h-8zM280 40h8v8h-8zM280 112h8v8h-8z"/>
-                    <rect x="22" y="56" width="82" height="48" rx="2"/>
-                    <rect class="a" x="119" y="56" width="82" height="48" rx="2"/>
-                    <rect x="216" y="56" width="82" height="48" rx="2"/>
-                    <path d="M30 98l18-26 12 14 8-8 18 20"/>
-                    <circle class="a" cx="160" cy="80" r="14"/>
-                    <path d="M230 68h54M230 80h54M230 92h32"/>
+                    <path class="thin" d="M38 40h46M38 80h46M38 120h46"/>
+                    <rect x="24" y="33" width="14" height="14" rx="2"/><rect x="24" y="73" width="14" height="14" rx="2"/><rect x="24" y="113" width="14" height="14" rx="2"/>
+                    <path d="M90 20v120"/>
+                    <circle cx="90" cy="40" r="6"/><circle class="a f" cx="90" cy="80" r="6"/><circle cx="90" cy="120" r="6"/>
+                    <path d="M110 40h70M110 80h120M110 120h58"/>
                   </svg>
                 </div>
                 <div class="project-body">
-                  <h3 class="project-title">Darkroom Log</h3>
-                  <p class="project-desc">A notebook app for my home film developing: stocks, times, temperatures and what went wrong this time.</p>
-                  <p class="project-links">
-                    <a href="https://example.com/darkroom-log">View project<span class="visually-hidden">: Darkroom Log</span></a>
-                    <a href="https://github.com/your-username/darkroom-log" target="_blank" rel="noopener noreferrer">Source code<span class="visually-hidden"> for Darkroom Log (opens in new tab)</span></a>
-                  </p>
-                  <p class="project-meta">№ 06 · Creative + software · ● Shipped · Python, Flask, SQLite</p>
+                  <h3 class="project-title">Personal Life Blog</h3>
+                  <p class="project-desc">A timeline of my own life, assembled automatically from Discord, Monzo, Swarm, Spotify, Trakt and Twitter. Part diary, part surveillance of myself.</p>
+                  <p class="project-meta">№ 06 · Tools · ● Finished · Six APIs</p>
                 </div>
               </article>
             </li>
@@ -266,39 +246,13 @@ reading:  datasheets (for fun)
     <section class="section-minor" id="more" aria-labelledby="more-title">
       <div class="container">
         <h2 id="more-title"><span class="prompt" aria-hidden="true">ls </span>Side quests</h2>
-
-        <div class="two-col">
-          <div id="drawer">
-            <h3>The junk drawer</h3>
-            <!-- EDIT: small utilities, experiments, abandoned ideas -->
-            <ul class="drawer-list">
-              <li><a href="https://example.com/contrast-pair">Contrast Pair</a> Checks the contrast of two colours so I stop squinting at my own designs. <span class="status">● Works</span></li>
-              <li><a href="https://example.com/regex-slowly">Regex, slowly</a> A blog post that explains regular expressions without the usual fear. <span class="status">● Published</span></li>
-              <li><a href="https://example.com/pixel-sorter">Pixel Sorter</a> Sorts an image's pixels by brightness, in your browser. Makes glitchy sunsets. <span class="status">● Works</span></li>
-              <li><a href="https://example.com/dotfiles">dotfiles</a> My shell and editor config. Yes, I have opinions about tabs. <span class="status">◐ Never finished</span></li>
-              <li><a href="https://example.com/fortune-bot">Fortune Bot</a> Sends me a bad programming proverb every morning. <span class="status">○ Retired fondly</span></li>
-            </ul>
-          </div>
-
-          <div id="log">
-            <h3>Log</h3>
-            <!-- EDIT: dated entries; add or remove freely -->
-            <ol class="timeline" reversed>
-              <li>
-                <time datetime="2026-09-20">20 Sep 2026</time>
-                <p>Finally figured out why Keyboard 0.3 double-types. It was a <a href="https://example.com/notes/debounce">debounce bug</a>. It is always debounce.</p>
-              </li>
-              <li>
-                <time datetime="2026-08-02">2 Aug 2026</time>
-                <p>Developed my first roll of expired film. Mostly fog. Quite pleased.</p>
-              </li>
-              <li>
-                <time datetime="2026-06-14">14 Jun 2026</time>
-                <p>Started learning Rust by rewriting a thing that worked fine in Go.</p>
-              </li>
-            </ol>
-          </div>
-        </div>
+        <!-- EDIT: small utilities, experiments, abandoned ideas. Wrap the title in <a href="…"> once you have a link -->
+        <ul class="drawer-list">
+          <li><strong class="drawer-title">Battle Morale</strong> A game made at the Bristol Pride Game Jam 2018. I wrote a YAML-based script parser in Python so the non-programmers on the team could write the game themselves. <span class="status">● Finished</span></li>
+          <li><strong class="drawer-title">House Finder</strong> Scrapes property listings, filters out the nonsense and keeps a curated spreadsheet of the ones worth a look. <span class="status">● Built</span></li>
+          <li><strong class="drawer-title">Plug.dj chat bot</strong> A JavaScript bot with a LAMP backend that looked after the House of Rock &amp; Metal chat room. <span class="status">○ Retired</span></li>
+          <li><strong class="drawer-title">Minecraft cheat detector</strong> Machine learning (an LVQ algorithm) that watches how players behave and spots modified clients. <span class="status">● Finished</span></li>
+        </ul>
       </div>
     </section>
 
@@ -309,30 +263,31 @@ reading:  datasheets (for fun)
           <h2 id="about-title"><span class="prompt" aria-hidden="true">man </span>About</h2>
           <!-- EDIT: a few personal sentences -->
           <p>
-            I'm Your Name, based in Your City. I like taking things apart to see
-            how they work and then putting them back together, usually with one
-            screw left over. This site is hand-written HTML and CSS, with no
-            frameworks and no tracking. View source is encouraged.
+            I'm Kit (they/them), a software engineer who likes hyper-specific
+            problems that nobody else considers problems. I've built
+            multiplayer games, led developer teams and taught undergraduates
+            to program, and this is where the more fun results end up.
           </p>
-          <p>Currently obsessed with tiny displays, plotter art, software that still runs in ten years, and mechanical keyboard switches (send help).</p>
+          <p>
+            This site is hand-written HTML and CSS, with no frameworks and no
+            tracking. View source is encouraged.
+          </p>
 
           <!-- EDIT: fun facts; add or remove pairs freely -->
           <dl class="facts">
-            <div><dt>Editor</dt><dd>Whichever one I'm arguing about this week</dd></div>
-            <div><dt>Most-used command</dt><dd><code>git status</code>, nervously</dd></div>
-            <div><dt>Favourite bug</dt><dd>The one that only happens on Tuesdays</dd></div>
+            <div><dt>Reading</dt><dd>An Acolyte's Guide to Demon Handling</dd></div>
+            <div><dt>Instruments</dt><dd>Piano, tenor saxophone and clarinet (Grade 8, a while ago)</dd></div>
+            <div><dt>Also known as</dt><dd>@gigosaurus</dd></div>
           </dl>
         </section>
 
         <section id="contact" aria-labelledby="contact-title">
           <h2 id="contact-title"><span class="prompt" aria-hidden="true">mail </span>Contact</h2>
-          <p>Email is best. Questions about any of the above are welcome, and I reply fastest to interesting bugs.</p>
-          <!-- EDIT: email and profile links -->
-          <p class="email"><a href="mailto:hello@example.com">hello@example.com</a></p>
+          <p>Email is best. Questions about any of the above are welcome.</p>
+          <p class="email"><a href="mailto:contact@nne.rs">contact@nne.rs</a></p>
           <ul class="contact-list">
-            <li><span class="contact-label">GitHub</span> <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">github.com/your-username<span class="visually-hidden"> (opens in new tab)</span></a></li>
-            <li><span class="contact-label">Mastodon</span> <a href="https://example.social/@your-username" target="_blank" rel="noopener noreferrer">@your-username@example.social<span class="visually-hidden"> (opens in new tab)</span></a></li>
-            <li><span class="contact-label">LinkedIn</span> <a href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer">linkedin.com/in/your-username<span class="visually-hidden"> (opens in new tab)</span></a></li>
+            <li><span class="contact-label">GitHub</span> <a href="https://github.com/gigosaurus" target="_blank" rel="noopener noreferrer">github.com/gigosaurus<span class="visually-hidden"> (opens in new tab)</span></a></li>
+            <li><span class="contact-label">LinkedIn</span> <a href="https://www.linkedin.com/in/gigosaurus/" target="_blank" rel="noopener noreferrer">linkedin.com/in/gigosaurus<span class="visually-hidden"> (opens in new tab)</span></a></li>
           </ul>
         </section>
       </div>
@@ -341,13 +296,12 @@ reading:  datasheets (for fun)
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <!-- EDIT: copyright holder -->
-      <p>&copy; <span id="year">2026</span> Your Name. Made by hand.</p>
+      <p>&copy; <span id="year">2026</span> Kit Manners. Made by hand.</p>
       <nav aria-label="Footer">
         <ul>
           <li><a href="#top">Back to top</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="https://github.com/your-username/site" target="_blank" rel="noopener noreferrer">Site source<span class="visually-hidden"> (opens in new tab)</span></a></li>
+          <li><a href="https://github.com/gigosaurus/site" target="_blank" rel="noopener noreferrer">Site source<span class="visually-hidden"> (opens in new tab)</span></a></li>
         </ul>
       </nav>
     </div>

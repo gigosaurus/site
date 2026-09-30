@@ -13,8 +13,8 @@ assets/favicon.svg  Placeholder favicon
 
 ## Customising
 
-- **Name, tagline, bio, skills:** edit the header, hero and About sections in `index.html`.
-- **Projects:** each `<li data-kind="…">` is one project. `data-kind` (software, hardware, creative; space-separate for several) drives the CSS-only filter buttons. Add `class="project-feature"` to make one span the full width. Each diagram is inline SVG so it follows the theme; swap it for an `<img loading="lazy" alt="…">` if you have real photos or screenshots.
+- **Name, tagline, bio:** edit the header, hero and About sections in `index.html`.
+- **Projects:** each `<li data-kind="…">` is one project. `data-kind` (games, music, tools; space-separate for several; if you rename them, update the filter buttons and the `:has()` rules in `styles.css`) drives the CSS-only filter buttons. Add `class="project-feature"` to make one span the full width. Each diagram is inline SVG so it follows the theme; swap it for an `<img loading="lazy" alt="…">` if you have real photos or screenshots.
 - **Side quests, about, contact:** these are deliberately quieter than the workshop. Each `<li>` (or `<dt>`/`<dd>` pair) is an entry; delete a whole section and its nav link if unused. Keep status labels as a symbol plus a word.
 - **Contact:** update the email and profile links. Keep `rel="noopener noreferrer"` on links with `target="_blank"`.
 - **Colours and spacing:** change the custom properties at the top of `styles.css`. Light and dark palettes are defined separately. Re-check contrast if you change them.

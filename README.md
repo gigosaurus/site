@@ -14,15 +14,15 @@ assets/favicon.svg  Placeholder favicon
 ## Customising
 
 - **Name, tagline, bio, skills:** edit the header, hero and About sections in `index.html`.
-- **Projects:** each `<li><article class="card">` is one card. Copy a block to add one, delete it to remove one. Replace the CSS-pattern `.thumb` div with an `<img class="thumb-img" loading="lazy" alt="…">` (example in the comment above the grid), or use `alt=""` if the image is purely decorative.
-- **Other work, notes, experience:** each `<li>` is an entry; delete the whole section (and its nav link) if unused.
+- **Projects:** each `<li data-kind="…"><article class="card">` is one card. `data-kind` (software, hardware, creative; space-separate for several) drives the CSS-only filter buttons. Copy a block to add one, delete it to remove one. Replace the CSS-pattern `.thumb` div with an `<img class="thumb-img" loading="lazy" alt="…">` (example in the comment above the grid), or use `alt=""` if the image is purely decorative.
+- **Junk drawer, log, about:** each `<li>` (or `<dt>`/`<dd>` pair) is an entry; delete a whole section and its nav link if unused. Keep status labels as a symbol plus a word.
 - **Contact:** update the email and profile links. Keep `rel="noopener noreferrer"` on links with `target="_blank"`.
 - **Colours and spacing:** change the custom properties at the top of `styles.css`. Light and dark palettes are defined separately. Re-check contrast if you change them.
-- **Metadata:** update `<title>`, description and Open Graph tags in `<head>`, and add `assets/og-image.png` (1200×630). Add `cv.pdf` or change that link.
+- **Metadata:** update `<title>`, description and Open Graph tags in `<head>`, and add `assets/og-image.png` (1200×630).
 
 ## Theme
 
-The site follows the system light/dark setting. With JavaScript enabled, a header button cycles system → light → dark and remembers the choice in `localStorage`.
+The site follows the system light/dark setting. With JavaScript enabled, a header button cycles system → light → dark and remembers the choice in `localStorage`. There is also a hidden phosphor theme: enter the Konami code (↑ ↑ ↓ ↓ ← → ← → B A).
 
 ## Deploying
 

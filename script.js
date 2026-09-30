@@ -36,6 +36,19 @@
     });
   }
 
+  // Easter egg: Konami code switches to a hidden phosphor-green theme (not saved)
+  var code = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
+  var pos = 0;
+  document.addEventListener('keydown', function (e) {
+    var key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+    pos = key === code[pos] ? pos + 1 : (key === code[0] ? 1 : 0);
+    if (pos === code.length) {
+      pos = 0;
+      current = 'phosphor';
+      apply(current);
+    }
+  });
+
   // Keep the footer year current
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();

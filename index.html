@@ -37,8 +37,7 @@
       <nav class="site-nav" aria-label="Main">
         <ul>
           <li><a href="#projects">Workshop</a></li>
-          <li><a href="#drawer">Drawer</a></li>
-          <li><a href="#log">Log</a></li>
+          <li><a href="#more">Side quests</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -52,25 +51,25 @@
   </header>
 
   <main id="main">
-    <!-- ============ HERO ============ -->
+    <!-- ============ HERO: the whole first screen ============ -->
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="container hero-grid">
-        <div>
-          <p class="eyebrow">Placeholder content · replace me</p>
+        <div class="hero-copy">
           <!-- EDIT: headline and intro -->
           <h1 id="hero-title">I make things, break them, and occasionally write down how.</h1>
           <p class="lead">
-            This is my workshop: code, circuit boards, generative art and other
-            things that started as "how hard can it be?". Some of it works.
+            Code, circuit boards, generative art and other things that started
+            as "how hard can it be?". Some of it works.
           </p>
           <p class="actions">
-            <a class="button button-primary" href="#projects">Poke around the workshop</a>
-            <a class="button" href="#contact">Say hello</a>
+            <a class="button button-primary" href="#projects">Explore the workshop</a>
+            <a class="button" href="#contact">Contact</a>
           </p>
         </div>
 
-        <!-- Decorative terminal. Content is repeated as real text above, so hidden from screen readers -->
+        <!-- Decorative status panel: hidden from screen readers -->
         <figure class="terminal" aria-hidden="true">
+          <figcaption class="terminal-bar">status.txt</figcaption>
           <pre><span class="t-dim">$</span> whoami
 your-name
 <span class="t-dim">$</span> cat status.txt
@@ -84,17 +83,19 @@ reading:  datasheets (for fun)
       </div>
     </section>
 
-    <!-- ============ PROJECTS ============ -->
-    <section class="section" id="projects" aria-labelledby="projects-title">
+    <!-- ============ WORKSHOP: the main event ============ -->
+    <section class="section-major" id="projects" aria-labelledby="projects-title">
       <div class="container">
         <h2 id="projects-title"><span class="prompt" aria-hidden="true">~/</span>Workshop</h2>
-        <p class="section-intro">The bigger things, with the story behind each one. Status is given honestly.</p>
+        <p class="section-intro">The bigger things, and the stories behind them.</p>
 
         <!--
           EDIT: each <li> is one project. Copy a whole block to add one.
-          data-kind controls the filter: software, hardware or creative (space-separate for several).
-          To use a real image instead of the CSS pattern, replace the .thumb div with:
-          <img class="thumb-img" src="assets/your-image.png" width="600" height="262" loading="lazy" alt="Describe what the image shows">
+          data-kind drives the filter: software, hardware or creative (space-separate for several).
+          class="project-feature" makes a project span the full width; remove it for a normal card.
+          The diagram is inline SVG so it follows the light/dark theme. To use a real image instead,
+          replace the <svg> with:
+          <img src="assets/your-image.png" width="640" height="320" loading="lazy" alt="Describe what the image shows">
         -->
         <div class="workshop">
           <!-- Filter uses radio buttons + CSS only. Hidden in browsers that can't support it, where everything just shows -->
@@ -108,94 +109,151 @@ reading:  datasheets (for fun)
             </div>
           </fieldset>
 
-          <ul class="card-grid">
-            <li data-kind="software">
-              <article class="card">
-                <div class="thumb thumb-grid" aria-hidden="true"><span>№ 01</span></div>
-                <div class="card-body">
-                  <p class="meta"><span>Software</span> <span class="status">● Shipped</span></p>
-                  <h3>Bitrot</h3>
-                  <p>Checksums my old photo archive every night and tells me when a file quietly goes bad. It found three. I was not thrilled.</p>
-                  <p class="built-with">Built with: Python, SQLite, cron</p>
-                  <p class="card-links">
+          <ul class="project-grid">
+            <!-- 01 Bitrot -->
+            <li data-kind="software" class="project-feature">
+              <article class="project">
+                <div class="project-art" aria-hidden="true">
+                  <svg viewBox="0 0 320 160" focusable="false">
+                    <g><rect x="24" y="34" width="62" height="76" rx="3"/><path d="M38 56h34M38 68h34M38 80h20"/></g>
+                    <g><rect x="94" y="34" width="62" height="76" rx="3"/><path d="M108 56h34M108 68h34M108 80h20"/></g>
+                    <g class="a dashed"><rect x="164" y="34" width="62" height="76" rx="3"/><path d="M180 58l30 28M210 58l-30 28"/></g>
+                    <g><rect x="234" y="34" width="62" height="76" rx="3"/><path d="M248 56h34M248 68h34M248 80h20"/></g>
+                    <g class="t"><text x="55" y="132" text-anchor="middle">a3f9</text><text x="125" y="132" text-anchor="middle">77c1</text><text x="195" y="132" text-anchor="middle" class="ta">e0??</text><text x="265" y="132" text-anchor="middle">19bd</text></g>
+                  </svg>
+                </div>
+                <div class="project-body">
+                  <h3 class="project-title">Bitrot</h3>
+                  <p class="project-desc">Checksums my old photo archive every night and tells me when a file quietly goes bad. It found three. I was not thrilled.</p>
+                  <p class="project-links">
                     <a href="https://example.com/bitrot">View project<span class="visually-hidden">: Bitrot</span></a>
                     <a href="https://github.com/your-username/bitrot" target="_blank" rel="noopener noreferrer">Source code<span class="visually-hidden"> for Bitrot (opens in new tab)</span></a>
                   </p>
+                  <p class="project-meta">№ 01 · Software · ● Shipped · Python, SQLite, cron</p>
                 </div>
               </article>
             </li>
+
+            <!-- 02 tidytree -->
             <li data-kind="software">
-              <article class="card">
-                <div class="thumb thumb-dots" aria-hidden="true"><span>№ 02</span></div>
-                <div class="card-body">
-                  <p class="meta"><span>Software</span> <span class="status">● Shipped</span></p>
-                  <h3>tidytree</h3>
-                  <p>A CLI that tidies messy project folders. Has a dry-run mode, because I once didn't, and we don't talk about it.</p>
-                  <p class="built-with">Built with: Go</p>
-                  <p class="card-links">
+              <article class="project">
+                <div class="project-art" aria-hidden="true">
+                  <svg viewBox="0 0 320 160" focusable="false">
+                    <rect x="24" y="42" width="44" height="20" rx="2" transform="rotate(-9 46 52)"/>
+                    <rect x="66" y="86" width="50" height="20" rx="2" transform="rotate(7 91 96)"/>
+                    <rect x="30" y="100" width="36" height="20" rx="2" transform="rotate(-4 48 110)"/>
+                    <rect x="78" y="40" width="38" height="20" rx="2" transform="rotate(12 97 50)"/>
+                    <path class="a" d="M136 80h40M166 70l10 10-10 10"/>
+                    <path d="M214 38v84M214 54h22M214 80h22M214 106h22"/>
+                    <rect x="240" y="44" width="56" height="20" rx="2"/><rect x="240" y="70" width="56" height="20" rx="2" class="a"/><rect x="240" y="96" width="56" height="20" rx="2"/>
+                  </svg>
+                </div>
+                <div class="project-body">
+                  <h3 class="project-title">tidytree</h3>
+                  <p class="project-desc">A CLI that tidies messy project folders. Has a dry-run mode, because I once didn't, and we don't talk about it.</p>
+                  <p class="project-links">
                     <a href="https://example.com/tidytree">View project<span class="visually-hidden">: tidytree</span></a>
                     <a href="https://github.com/your-username/tidytree" target="_blank" rel="noopener noreferrer">Source code<span class="visually-hidden"> for tidytree (opens in new tab)</span></a>
                   </p>
+                  <p class="project-meta">№ 02 · Software · ● Shipped · Go</p>
                 </div>
               </article>
             </li>
+
+            <!-- 03 Windowsill -->
             <li data-kind="hardware">
-              <article class="card">
-                <div class="thumb thumb-blocks" aria-hidden="true"><span>№ 03</span></div>
-                <div class="card-body">
-                  <p class="meta"><span>Hardware</span> <span class="status">◐ Tinkering</span></p>
-                  <h3>Windowsill</h3>
-                  <p>An e-ink display that shows the weather and judges my houseplants. Firmware is done; the case is on its fourth print.</p>
-                  <p class="built-with">Built with: C++, ESP32, a 3D printer</p>
-                  <p class="card-links">
+              <article class="project">
+                <div class="project-art" aria-hidden="true">
+                  <svg viewBox="0 0 320 160" focusable="false">
+                    <rect x="70" y="16" width="180" height="128" rx="6"/>
+                    <rect x="82" y="28" width="156" height="104" rx="2"/>
+                    <circle class="a" cx="112" cy="62" r="11"/>
+                    <path class="a" d="M112 41v5M91 62h5M128 62h5M97 47l3 3M127 47l-3 3"/>
+                    <path d="M150 54h64M150 68h40"/>
+                    <path d="M200 124V98M200 110c-10-2-14-10-14-14 10 0 14 6 14 14zM200 104c10-2 14-10 14-14-10 0-14 6-14 14z"/>
+                  </svg>
+                </div>
+                <div class="project-body">
+                  <h3 class="project-title">Windowsill</h3>
+                  <p class="project-desc">An e-ink display that shows the weather and judges my houseplants. Firmware is done; the case is on its fourth print.</p>
+                  <p class="project-links">
                     <a href="https://example.com/windowsill">View project<span class="visually-hidden">: Windowsill</span></a>
                     <a href="https://github.com/your-username/windowsill" target="_blank" rel="noopener noreferrer">Source code<span class="visually-hidden"> for Windowsill (opens in new tab)</span></a>
                   </p>
+                  <p class="project-meta">№ 03 · Hardware · ◐ Tinkering · C++, ESP32, a 3D printer</p>
                 </div>
               </article>
             </li>
+
+            <!-- 04 Flowfield -->
             <li data-kind="creative">
-              <article class="card">
-                <div class="thumb thumb-lines" aria-hidden="true"><span>№ 04</span></div>
-                <div class="card-body">
-                  <p class="meta"><span>Creative</span> <span class="status">● Shipped</span></p>
-                  <h3>Flowfield</h3>
-                  <p>Generative prints drawn from noise fields. Reload the page, get a new one. I've lost hours to the refresh button.</p>
-                  <p class="built-with">Built with: JavaScript, canvas</p>
-                  <p class="card-links">
+              <article class="project">
+                <div class="project-art" aria-hidden="true">
+                  <svg viewBox="0 0 320 160" focusable="false">
+                    <path d="M0 130C50 70 110 170 160 110S270 50 320 90" transform="translate(0 -40)"/>
+                    <path d="M0 130C50 70 110 170 160 110S270 50 320 90" transform="translate(0 -24)"/>
+                    <path class="a" d="M0 130C50 70 110 170 160 110S270 50 320 90" transform="translate(0 -8)"/>
+                    <path d="M0 130C50 70 110 170 160 110S270 50 320 90" transform="translate(0 8)"/>
+                    <path d="M0 130C50 70 110 170 160 110S270 50 320 90" transform="translate(0 24)"/>
+                  </svg>
+                </div>
+                <div class="project-body">
+                  <h3 class="project-title">Flowfield</h3>
+                  <p class="project-desc">Generative prints drawn from noise fields. Reload the page, get a new one. I've lost hours to the refresh button.</p>
+                  <p class="project-links">
                     <a href="https://example.com/flowfield">View project<span class="visually-hidden">: Flowfield</span></a>
                     <a href="https://github.com/your-username/flowfield" target="_blank" rel="noopener noreferrer">Source code<span class="visually-hidden"> for Flowfield (opens in new tab)</span></a>
                   </p>
+                  <p class="project-meta">№ 04 · Creative · ● Shipped · JavaScript, canvas</p>
                 </div>
               </article>
             </li>
+
+            <!-- 05 Keyboard 0.3 -->
             <li data-kind="hardware software">
-              <article class="card">
-                <div class="thumb thumb-cross" aria-hidden="true"><span>№ 05</span></div>
-                <div class="card-body">
-                  <p class="meta"><span>Hardware + software</span> <span class="status">◐ Tinkering</span></p>
-                  <h3>Keyboard 0.3</h3>
-                  <p>A hand-wired split keyboard with custom firmware. Version 0.1 had a key that typed on its own. Version 0.3 is merely opinionated.</p>
-                  <p class="built-with">Built with: Rust, a soldering iron, patience</p>
-                  <p class="card-links">
+              <article class="project">
+                <div class="project-art" aria-hidden="true">
+                  <svg viewBox="0 0 320 160" focusable="false">
+                    <path d="M24 30h22v22h-22zM50 30h22v22h-22zM76 30h22v22h-22zM102 30h22v22h-22zM24 56h22v22h-22zM50 56h22v22h-22zM102 56h22v22h-22zM24 82h22v22h-22zM50 82h22v22h-22zM76 82h22v22h-22zM102 82h22v22h-22z"/>
+                    <path d="M192 30h22v22h-22zM218 30h22v22h-22zM244 30h22v22h-22zM270 30h22v22h-22zM192 56h22v22h-22zM218 56h22v22h-22zM244 56h22v22h-22zM270 56h22v22h-22zM192 82h22v22h-22zM218 82h22v22h-22zM244 82h22v22h-22zM270 82h22v22h-22z"/>
+                    <rect class="a f" x="76" y="56" width="22" height="22" rx="2"/>
+                  </svg>
+                </div>
+                <div class="project-body">
+                  <h3 class="project-title">Keyboard 0.3</h3>
+                  <p class="project-desc">A hand-wired split keyboard with custom firmware. Version 0.1 had a key that typed on its own. Version 0.3 is merely opinionated.</p>
+                  <p class="project-links">
                     <a href="https://example.com/keyboard">View project<span class="visually-hidden">: Keyboard 0.3</span></a>
                     <a href="https://github.com/your-username/keyboard" target="_blank" rel="noopener noreferrer">Source code<span class="visually-hidden"> for Keyboard 0.3 (opens in new tab)</span></a>
                   </p>
+                  <p class="project-meta">№ 05 · Hardware + software · ◐ Tinkering · Rust, a soldering iron, patience</p>
                 </div>
               </article>
             </li>
+
+            <!-- 06 Darkroom Log -->
             <li data-kind="creative software">
-              <article class="card">
-                <div class="thumb thumb-waves" aria-hidden="true"><span>№ 06</span></div>
-                <div class="card-body">
-                  <p class="meta"><span>Creative + software</span> <span class="status">● Shipped</span></p>
-                  <h3>Darkroom Log</h3>
-                  <p>A notebook app for my home film developing: stocks, times, temperatures and what went wrong this time.</p>
-                  <p class="built-with">Built with: Python, Flask, SQLite</p>
-                  <p class="card-links">
+              <article class="project">
+                <div class="project-art" aria-hidden="true">
+                  <svg viewBox="0 0 320 160" focusable="false">
+                    <rect x="8" y="32" width="304" height="96" rx="3"/>
+                    <path d="M20 40h8v8h-8zM20 112h8v8h-8zM40 40h8v8h-8zM40 112h8v8h-8zM60 40h8v8h-8zM60 112h8v8h-8zM80 40h8v8h-8zM80 112h8v8h-8zM100 40h8v8h-8zM100 112h8v8h-8zM120 40h8v8h-8zM120 112h8v8h-8zM140 40h8v8h-8zM140 112h8v8h-8zM160 40h8v8h-8zM160 112h8v8h-8zM180 40h8v8h-8zM180 112h8v8h-8zM200 40h8v8h-8zM200 112h8v8h-8zM220 40h8v8h-8zM220 112h8v8h-8zM240 40h8v8h-8zM240 112h8v8h-8zM260 40h8v8h-8zM260 112h8v8h-8zM280 40h8v8h-8zM280 112h8v8h-8z"/>
+                    <rect x="22" y="56" width="82" height="48" rx="2"/>
+                    <rect class="a" x="119" y="56" width="82" height="48" rx="2"/>
+                    <rect x="216" y="56" width="82" height="48" rx="2"/>
+                    <path d="M30 98l18-26 12 14 8-8 18 20"/>
+                    <circle class="a" cx="160" cy="80" r="14"/>
+                    <path d="M230 68h54M230 80h54M230 92h32"/>
+                  </svg>
+                </div>
+                <div class="project-body">
+                  <h3 class="project-title">Darkroom Log</h3>
+                  <p class="project-desc">A notebook app for my home film developing: stocks, times, temperatures and what went wrong this time.</p>
+                  <p class="project-links">
                     <a href="https://example.com/darkroom-log">View project<span class="visually-hidden">: Darkroom Log</span></a>
                     <a href="https://github.com/your-username/darkroom-log" target="_blank" rel="noopener noreferrer">Source code<span class="visually-hidden"> for Darkroom Log (opens in new tab)</span></a>
                   </p>
+                  <p class="project-meta">№ 06 · Creative + software · ● Shipped · Python, Flask, SQLite</p>
                 </div>
               </article>
             </li>
@@ -204,47 +262,26 @@ reading:  datasheets (for fun)
       </div>
     </section>
 
-    <!-- ============ THE DRAWER (small stuff) ============ -->
-    <section class="section" id="drawer" aria-labelledby="drawer-title">
+    <!-- ============ SIDE QUESTS: deliberately quieter ============ -->
+    <section class="section-minor" id="more" aria-labelledby="more-title">
       <div class="container">
-        <h2 id="drawer-title"><span class="prompt" aria-hidden="true">ls </span>The junk drawer</h2>
-        <p class="section-intro">Small utilities, one-evening experiments and abandoned ideas I'm still fond of.</p>
-
-        <!-- EDIT: each <li> is one entry -->
-        <ul class="compact-list">
-          <li>
-            <h3><a href="https://example.com/contrast-pair">Contrast Pair</a></h3>
-            <p>Checks the contrast of two colours so I stop squinting at my own designs. <span class="status">● Works</span></p>
-          </li>
-          <li>
-            <h3><a href="https://example.com/regex-slowly">Regex, slowly</a></h3>
-            <p>A blog post that explains regular expressions without the usual fear. <span class="status">● Published</span></p>
-          </li>
-          <li>
-            <h3><a href="https://example.com/pixel-sorter">Pixel Sorter</a></h3>
-            <p>Sorts an image's pixels by brightness, in your browser. Makes glitchy sunsets. <span class="status">● Works</span></p>
-          </li>
-          <li>
-            <h3><a href="https://example.com/dotfiles">dotfiles</a></h3>
-            <p>My shell and editor config. Yes, I have opinions about tabs. <span class="status">◐ Never finished</span></p>
-          </li>
-          <li>
-            <h3><a href="https://example.com/fortune-bot">Fortune Bot</a></h3>
-            <p>Sends me a randomly chosen bad programming proverb every morning. <span class="status">○ Retired fondly</span></p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ============ LOG ============ -->
-    <section class="section" id="log" aria-labelledby="log-title">
-      <div class="container">
-        <h2 id="log-title"><span class="prompt" aria-hidden="true">tail -f </span>Log</h2>
-        <p class="section-intro">Recent happenings and things I've learned the hard way. Newest first.</p>
+        <h2 id="more-title"><span class="prompt" aria-hidden="true">ls </span>Side quests</h2>
 
         <div class="two-col">
-          <div>
-            <h3>What's been going on</h3>
+          <div id="drawer">
+            <h3>The junk drawer</h3>
+            <!-- EDIT: small utilities, experiments, abandoned ideas -->
+            <ul class="drawer-list">
+              <li><a href="https://example.com/contrast-pair">Contrast Pair</a> Checks the contrast of two colours so I stop squinting at my own designs. <span class="status">● Works</span></li>
+              <li><a href="https://example.com/regex-slowly">Regex, slowly</a> A blog post that explains regular expressions without the usual fear. <span class="status">● Published</span></li>
+              <li><a href="https://example.com/pixel-sorter">Pixel Sorter</a> Sorts an image's pixels by brightness, in your browser. Makes glitchy sunsets. <span class="status">● Works</span></li>
+              <li><a href="https://example.com/dotfiles">dotfiles</a> My shell and editor config. Yes, I have opinions about tabs. <span class="status">◐ Never finished</span></li>
+              <li><a href="https://example.com/fortune-bot">Fortune Bot</a> Sends me a bad programming proverb every morning. <span class="status">○ Retired fondly</span></li>
+            </ul>
+          </div>
+
+          <div id="log">
+            <h3>Log</h3>
             <!-- EDIT: dated entries; add or remove freely -->
             <ol class="timeline" reversed>
               <li>
@@ -261,72 +298,45 @@ reading:  datasheets (for fun)
               </li>
             </ol>
           </div>
-
-          <div>
-            <h3>Currently obsessed with</h3>
-            <!-- EDIT: current interests -->
-            <ul class="plain-list">
-              <li>Tiny displays and the weird drivers they need</li>
-              <li>Plotter art and pen choices</li>
-              <li>Writing software that still runs in ten years</li>
-              <li>Mechanical keyboard switches (send help)</li>
-            </ul>
-
-            <h3 class="spaced">Lessons learned the hard way</h3>
-            <ul class="plain-list">
-              <li>Back up before you "just quickly" fix it.</li>
-              <li>Check the datasheet before the soldering iron.</li>
-              <li>The bug is in the part you were sure was fine.</li>
-            </ul>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ ABOUT ============ -->
-    <section class="section" id="about" aria-labelledby="about-title">
-      <div class="container">
-        <h2 id="about-title"><span class="prompt" aria-hidden="true">man </span>About</h2>
-        <div class="about-grid">
-          <div class="prose">
-            <!-- EDIT: a few personal sentences -->
-            <p>
-              I'm Your Name, based in Your City. I like taking things apart to
-              see how they work and then putting them back together, usually with
-              one screw left over. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit.
-            </p>
-            <p>
-              This site is hand-written HTML and CSS, no frameworks and no
-              tracking. View source is encouraged.
-            </p>
-          </div>
+    <!-- ============ ABOUT + CONTACT: one quiet closing band ============ -->
+    <div class="section-minor closing">
+      <div class="container two-col">
+        <section id="about" aria-labelledby="about-title">
+          <h2 id="about-title"><span class="prompt" aria-hidden="true">man </span>About</h2>
+          <!-- EDIT: a few personal sentences -->
+          <p>
+            I'm Your Name, based in Your City. I like taking things apart to see
+            how they work and then putting them back together, usually with one
+            screw left over. This site is hand-written HTML and CSS, with no
+            frameworks and no tracking. View source is encouraged.
+          </p>
+          <p>Currently obsessed with tiny displays, plotter art, software that still runs in ten years, and mechanical keyboard switches (send help).</p>
 
           <!-- EDIT: fun facts; add or remove pairs freely -->
           <dl class="facts">
             <div><dt>Editor</dt><dd>Whichever one I'm arguing about this week</dd></div>
             <div><dt>Most-used command</dt><dd><code>git status</code>, nervously</dd></div>
             <div><dt>Favourite bug</dt><dd>The one that only happens on Tuesdays</dd></div>
-            <div><dt>Desk snack</dt><dd>Salted peanuts</dd></div>
           </dl>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- ============ CONTACT ============ -->
-    <section class="section" id="contact" aria-labelledby="contact-title">
-      <div class="container">
-        <h2 id="contact-title"><span class="prompt" aria-hidden="true">mail </span>Contact</h2>
-        <p class="section-intro">Email is best. Questions about any of the above are welcome, and I reply fastest to interesting bugs.</p>
-        <!-- EDIT: email and profile links -->
-        <ul class="contact-list">
-          <li><span class="contact-label">Email</span> <a href="mailto:hello@example.com">hello@example.com</a></li>
-          <li><span class="contact-label">GitHub</span> <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">github.com/your-username<span class="visually-hidden"> (opens in new tab)</span></a></li>
-          <li><span class="contact-label">Mastodon</span> <a href="https://example.social/@your-username" target="_blank" rel="noopener noreferrer">@your-username@example.social<span class="visually-hidden"> (opens in new tab)</span></a></li>
-          <li><span class="contact-label">LinkedIn</span> <a href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer">linkedin.com/in/your-username<span class="visually-hidden"> (opens in new tab)</span></a></li>
-        </ul>
+        <section id="contact" aria-labelledby="contact-title">
+          <h2 id="contact-title"><span class="prompt" aria-hidden="true">mail </span>Contact</h2>
+          <p>Email is best. Questions about any of the above are welcome, and I reply fastest to interesting bugs.</p>
+          <!-- EDIT: email and profile links -->
+          <p class="email"><a href="mailto:hello@example.com">hello@example.com</a></p>
+          <ul class="contact-list">
+            <li><span class="contact-label">GitHub</span> <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">github.com/your-username<span class="visually-hidden"> (opens in new tab)</span></a></li>
+            <li><span class="contact-label">Mastodon</span> <a href="https://example.social/@your-username" target="_blank" rel="noopener noreferrer">@your-username@example.social<span class="visually-hidden"> (opens in new tab)</span></a></li>
+            <li><span class="contact-label">LinkedIn</span> <a href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer">linkedin.com/in/your-username<span class="visually-hidden"> (opens in new tab)</span></a></li>
+          </ul>
+        </section>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer class="site-footer">

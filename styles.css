@@ -9,12 +9,12 @@
 :root {
   color-scheme: light dark;
 
-  /* Light theme: warm paper + one green accent (text pairs meet WCAG AA) */
-  --bg: #faf8f2;
-  --bg-alt: #f0ede3;
-  --text: #1c1c1a;
-  --text-muted: #57554b;
-  --border: #d6d2c4;
+  /* Light theme: white and cool grey + one green accent (text pairs meet WCAG AA) */
+  --bg: #ffffff;
+  --bg-alt: #f1f3f5;
+  --text: #16181d;
+  --text-muted: #555b66;
+  --border: #d4d7dd;
   --accent: #0a6b4b;
   --accent-contrast: #ffffff;
   --focus: #b45309;
@@ -203,6 +203,7 @@ h1 { font-size: clamp(2.25rem, 1rem + 4.2vw, 3.75rem); line-height: 1.08; letter
 .project-art .a { stroke: var(--accent); }
 .project-art .f { fill: var(--accent); }
 .project-art .thin { stroke-width: 1; }
+.project-art .solid { fill: var(--bg); }
 .project-art .dashed { stroke-dasharray: 5 4; }
 .project-art .t text { fill: currentColor; stroke: none; font: 11px var(--font-mono); }
 .project-art .t .ta { fill: var(--accent); font-weight: 700; }

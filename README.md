@@ -18,7 +18,7 @@ assets/favicon.svg  Placeholder favicon
 - **Side quests and contact:** these are deliberately quieter than the projects. Each `<li>` is an entry; delete a whole section and its nav link if unused. Keep status labels as a symbol plus a word.
 - **Contact:** update the email and profile links. Keep `rel="noopener noreferrer"` on links with `target="_blank"`.
 - **Colours and spacing:** change the custom properties at the top of `styles.css`. Light and dark palettes are defined separately. Re-check contrast if you change them.
-- **Metadata:** update `<title>`, description and Open Graph tags in `<head>`, and add `assets/og-image.png` (1200×630).
+- **Metadata:** update `<title>`, description and Open Graph tags in `<head>`, and replace `assets/og-image.png` (1200×630) if you change the headline or status panel.
 
 ## Theme
 

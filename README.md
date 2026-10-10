@@ -17,7 +17,7 @@ assets/favicon.svg  Placeholder favicon
 - **Projects:** each `<li data-kind="…">` is one project. `data-kind` (games, music, tools; space-separate for several; if you rename them, update the filter buttons and the `:has()` rules in `styles.css`) drives the CSS-only filter buttons. Add `class="project-feature"` to make one span the full width. Each diagram is inline SVG so it follows the theme; swap it for an `<img loading="lazy" alt="…">` if you have real photos or screenshots.
 - **Side quests and contact:** these are deliberately quieter than the projects. Each `<li>` is an entry; delete a whole section and its nav link if unused. Keep status labels as a symbol plus a word.
 - **Contact:** update the email and profile links. Keep `rel="noopener noreferrer"` on links with `target="_blank"`.
-- **Colours and spacing:** change the custom properties at the top of `styles.css`. Light and dark palettes are defined separately. Re-check contrast if you change them.
+- **Design tokens:** everything visual comes from the custom properties at the top of `styles.css`: colours (light, dark and phosphor palettes), an eight-step type scale, weights, line-heights, a spacing scale, two radii, line widths, one shadow offset and lift, and one motion duration and easing curve. Change a value there rather than hard-coding one. Re-check contrast if you change colours.
 - **Metadata:** update `<title>`, description and Open Graph tags in `<head>`, and replace `assets/og-image.png` (1200×630) if you change the headline or status panel.
 
 ## Theme
